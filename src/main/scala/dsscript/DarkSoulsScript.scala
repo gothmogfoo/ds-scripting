@@ -33,7 +33,7 @@ trait DarkSoulsScript extends Areas with App {
   for {
     (area, evts) <- events
   } {
-    println(s"Modify ${area.id}.unpack.txt: ")
+    println(s"\nModify ${area.id}.unpack.txt: ")
     val (replacedEvents, newEvents) = evts.partition(_.replace)
     if (newEvents.nonEmpty) {
       println(header("Add to constructor "))
